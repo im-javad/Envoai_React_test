@@ -1,11 +1,3 @@
-.data-entry-container {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid #e0e0e0;
-}
-
 .data-entry-container h3 {
   color: #333;
   margin-bottom: 0.5rem;
@@ -38,6 +30,10 @@
 .entry-form button {
   grid-column: span 2;
   margin-top: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .entries-section {
@@ -77,12 +73,42 @@
 .entries-table {
   width: 100%;
   margin-top: 1rem;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.entries-table thead {
+  background: #efefef;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.entries-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.entries-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.entries-table tbody tr:hover {
+  background: #f8f9fa;
+  transition: background 0.2s ease;
 }
 
 .delete-btn {
   background: #dc3545;
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 .delete-btn:hover {
@@ -93,9 +119,62 @@
   .entry-form {
     grid-template-columns: 1fr;
   }
-  
+
   .entry-form button {
     grid-column: span 1;
   }
-}
 
+  .entries-table {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .entries-table thead {
+    display: none;
+  }
+
+  .entries-table tbody {
+    display: block;
+  }
+
+  .entries-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .entries-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+    text-align: right;
+  }
+
+  .entries-table td:last-child {
+    border-bottom: none;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .entries-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #495057;
+    text-align: left;
+    flex: 0 0 30%;
+  }
+
+  .entries-table td:last-child::before {
+    content: none;
+  }
+
+  .delete-btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+}

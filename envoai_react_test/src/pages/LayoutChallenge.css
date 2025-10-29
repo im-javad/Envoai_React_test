@@ -1,42 +1,15 @@
-.messy-layout {
-  position: relative;
-  margin-left: -20px;
-  padding-right: 100px;
+.messy-layout > .system-monitor-container {
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 50px;
 }
 
-.messy-layout > div:first-child {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 45%;
-  z-index: 2;
-  margin-top: 20px;
+.messy-layout > .data-entry-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0e0e0;
 }
-
-.messy-layout > div:last-child {
-  position: absolute;
-  left: 10%;
-  top: 50px;
-  width: 60%;
-  z-index: 1;
-  margin-bottom: 30px;
-}
-
-.messy-layout::after {
-  content: "";
-  display: block;
-  height: 800px;
-}
-
-@media (max-width: 768px) {
-  .messy-layout > div:first-child {
-    left: 70%;
-    width: 80%;
-  }
-  
-  .messy-layout > div:last-child {
-    left: 5%;
-    width: 90%;
-  }
-}
-

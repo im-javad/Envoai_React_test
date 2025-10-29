@@ -16,6 +16,24 @@
   margin-bottom: 1rem;
 }
 
+.login-btn,
+.logout-btn {
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  margin-left: 5px;
+}
+
+.login-btn {
+  background: #667eea;
+  color: white;
+}
+
+.logout-btn {
+  background: #dc3545;
+  color: white;
+}
+
 .hint {
   margin-top: 1rem;
   padding: 0.75rem;
@@ -105,9 +123,8 @@
   .cart-table {
     font-size: 0.85rem;
   }
-  
+
   .cart-table input[type="number"] {
     width: 50px !important;
   }
 }
-
